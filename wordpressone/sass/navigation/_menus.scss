@@ -1,0 +1,129 @@
+.overlay-navcontainer {
+	position: absolute;
+	top: 0;
+	animation: grow 1s;
+	height: 100vh;
+	animation-fill-mode: forwards;
+	overflow: hidden;
+	transition: all .5s ease-in;
+	
+	@media screen and (min-width: 600px) {
+		animation: none;
+		top: auto;
+		bottom: 0;
+		height: fit-content;
+	}
+}
+ @keyframes grow {
+	 0% {  opacity: 0; }
+	 100% { opacity: 1; }
+ }
+.main-navigation {
+	width: 100%;
+	padding: 0.5rem 1rem;
+	background-color: black;
+	color: white;
+	transition: all .1s ease-out;
+	
+	@media screen and (min-width: 600px) { 
+		display: block!important;
+		position: absolute;
+		bottom: 0;
+	 }
+	a {
+		display: block;
+		text-decoration: none;
+		background-color: #000000;
+		transition: all .5s ease-out;
+		border-radius: 30px;
+		@media screen and (min-width: 600px) {
+			padding: 0.5em 1em;
+		}
+		&:hover {
+			background-color: #161616;
+		
+			@media screen and (min-width: 600px) {
+				border-top: 4px solid #4980dd;
+				border-bottom: 4px solid #4980dd;
+			}
+		}
+		
+		@media screen and (min-width: 600px) {
+			border-top: 4px solid #000;
+			border-bottom: 4px solid #000;
+			font-size: 1.2rem;
+		}
+	}
+	.nav-container {
+		max-width: 1500px;
+		margin: 0 auto; 
+	}
+	// UL -
+	.nav-menu {
+		display: none;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		
+		// Tablet
+		@media screen and (min-width: 600px) { 
+			width:80%;
+			margin: 0 auto;
+			display: flex!important;
+			justify-content: space-around;
+			//border:3px solid #10b1eb;
+			
+			
+		}
+		// DESKTOP
+		@media screen and (min-width: 1224px) {
+			width:90%;
+		}
+		
+		li {
+			border-radius: 15px;
+			text-align: center;
+			font-size: 2rem;
+			text-transform: uppercase;
+		}
+	}
+	// ===== BURGER 1 =====
+	.burgerContainer {
+	display:flex;
+	flex-direction: column;
+	align-items: flex-end;
+	@media screen and (min-width: 37.5em) { display: none; }
+
+	.bars {
+		width: 40px;
+		height: 8px;
+		margin: 5px 0;
+		background-color: #f1f1f1;
+		transition: opacity .3s ,transform .5s ease-out;
+		border-radius: 20px;
+	}
+
+	.opacityOff {
+		opacity: 0;
+	}
+
+	.transformBurgerBarone {
+		transform: translate(10px, 25px) rotate(-130deg);
+	}
+
+	.transformBurgerBarthree {
+		transform: translate(10px, -10px) rotate(130deg);
+	}
+
+	}
+}
+
+.fixed-nav {
+	position: fixed;
+	top: 0;
+	height: 80px;
+	z-index: 100;
+	padding-top: 1.5rem;
+	height: fit-content;
+	box-shadow: 0 2px 2px -2px #f1f1f1;
+}

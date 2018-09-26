@@ -1,0 +1,47 @@
+// HERO STYLES
+.hero-banner-with-admin, .hero-banner {
+    background-color: lightblue;
+    background-repeat: no-repeat;
+    height: 97vh;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-blend-mode: multiply;
+
+    .hero-content {
+        width: 90%;
+        text-align: center;
+        padding: 1rem;
+        background-color: rgba(0,0,0,0.5);
+        border-radius: 20px;
+
+        @media screen and (min-width: 600px) {
+            width: 50%;    
+        }
+
+        img {
+            width: 250px;
+        }
+        h1 {
+            font-size: 40px;
+            font-weight: 700;
+            padding: 0;
+            margin: 0;
+        }
+        p {
+            padding: 0;
+            margin: 0;
+            color: $color__text-light;
+            font-size: 30px;
+        }
+    }
+}
+
+// Show this class if the admin bar isn't there - so not logged in
+.hero-banner {
+    height: 100vh;
+}

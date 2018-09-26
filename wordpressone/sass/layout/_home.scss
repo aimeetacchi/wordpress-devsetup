@@ -1,0 +1,39 @@
+.home-about {
+    margin: 0 0 2rem;
+    
+    @media(min-width: 640px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+    }
+
+    .about-info {
+        background-color: #1e3b69;
+        padding: 1rem;
+        margin: 0 0 2rem;
+        border-bottom-right-radius: 25px;
+        border-bottom-left-radius: 25px;
+    }
+
+    .about-img {
+        align-self: center;
+        img {
+            border: 10px solid $color__text-light;
+        }
+    }
+}
+
+
+
+.home-gallery {
+    
+    @media(min-width: 640px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+    }
+
+    @media(min-width: 1024px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

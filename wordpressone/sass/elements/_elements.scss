@@ -1,0 +1,53 @@
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+	box-sizing: inherit;
+}
+
+body {
+	font-family: $font__main;
+	background: $color__background-body; /* Fallback for when there is no custom background color defined. */
+}
+
+header {
+	position: relative;
+}
+
+hr {
+	background-color: $color__background-hr;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+
+@import "lists";
+
+img {
+	height: auto; /* Make sure images are scaled correctly. */
+	max-width: 100%; /* Adhere to container width. */
+}
+
+figure {
+	margin: 1em 0; /* Extra wide images within figure tags don't overflow the content area. */
+}
+
+.content {
+	width: 90%;
+	margin: 0 auto;
+	@media screen and (min-width: 37.5em) {
+		display: block!important;
+		max-width: 1200px;
+	}
+}
+
+footer {
+	background-color: black;
+	padding: 3rem 1rem;
+	@media screen and (min-width: 37.5em) {
+		display: block!important;
+	}
+}
